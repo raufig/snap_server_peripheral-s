@@ -115,7 +115,7 @@
         let diskLabels = ["% total free"];
 
         //let cpusLabels = []
-        let result = await fetch("/snap/server_perf").then((result) =>
+        let result = await fetch("/snap/snap_server_peripherals").then((result) =>
           result.json()
         );
         result.disk.forEach((disk) => {

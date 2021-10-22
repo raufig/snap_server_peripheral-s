@@ -115,9 +115,10 @@
         let diskLabels = ["% total free"];
 
         //let cpusLabels = []
-        let result = await fetch("/snap/snap_server_peripherals").then((result) =>
+        let result = await fetch("?mode=stat").then((result) =>
           result.json()
         );
+        console.log(result)
         result.disk.forEach((disk) => {
           used += disk._used;
           total += disk._blocks;
